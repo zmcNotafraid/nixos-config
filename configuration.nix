@@ -117,7 +117,8 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    vim 
+    zsh
+    neovim 
     wget
   ];
 
@@ -140,6 +141,9 @@
 
   hardware.bluetooth.enable = true;
   services.blueman.enable = true;
+
+  programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
