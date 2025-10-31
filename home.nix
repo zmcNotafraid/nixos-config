@@ -11,7 +11,7 @@
     thunderbird
     vscode
     oh-my-zsh
-    asdf-vm
+    mise
     rustup
     autojump
     tig
@@ -26,6 +26,18 @@
     userName  = "zmcNotafraid";
     userEmail = "mingchang555@hotmail.com";
   };
+
+  programs.mise = {
+    enable = true; 
+    globalConfig = {
+    tools = {
+      python="lts";
+      node = ["3.14.0"];
+    };
+    };
+  };
+
+
 
  programs.neovim = {
     enable = true;
@@ -50,11 +62,9 @@
     enable = true;  # 启用 Zsh
     oh-my-zsh = {
       enable = true;
-      plugins = ["git"];
+      plugins = ["git" "rails" "ruby"];
     };
   };
-
-  home.shell.enableZshIntegration=true;
 
   # home-manager 状态版本
   home.stateVersion = "25.05";

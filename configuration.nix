@@ -119,6 +119,8 @@
   environment.systemPackages = with pkgs; [
     zsh
     neovim 
+    gnupg
+    pinentry-tty
     wget
   ];
 
@@ -143,7 +145,13 @@
   services.blueman.enable = true;
 
   programs.zsh.enable = true;
+
   users.defaultUserShell = pkgs.zsh;
+
+  programs.gpg = {
+   enable = true;
+   publicKeys = [ { source = ./github_gpg.asc; } ];
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
