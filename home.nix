@@ -19,7 +19,7 @@
 
   programs.home-manager.enable = true;
   programs.autojump.enable = true;
-
+  programs.gpg.enable = true;
 
   programs.git = {
     enable = true;
@@ -28,15 +28,21 @@
   };
 
   programs.mise = {
-    enable = true; 
+    enable = true;
     globalConfig = {
-    tools = {
-      python="lts";
-      node = ["3.14.0"];
-    };
+      settings = {
+        experimental = true;
+        node = {
+	  compile = false;
+	};
+      };
+      tools = {
+        node = "lts";
+	erlang = ["28.1.1"];
+	elixir = ["1.19.0"];
+      };
     };
   };
-
 
 
  programs.neovim = {
@@ -58,11 +64,12 @@
   };
 
 
+
   programs.zsh = {
     enable = true;  # 启用 Zsh
     oh-my-zsh = {
       enable = true;
-      plugins = ["git" "rails" "ruby"];
+      plugins = ["git"];
     };
   };
 

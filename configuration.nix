@@ -122,6 +122,7 @@
     gnupg
     pinentry-tty
     wget
+    python3
   ];
 
   environment.variables = {
@@ -147,11 +148,6 @@
   programs.zsh.enable = true;
 
   users.defaultUserShell = pkgs.zsh;
-
-  programs.gpg = {
-   enable = true;
-   publicKeys = [ { source = ./github_gpg.asc; } ];
-  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
