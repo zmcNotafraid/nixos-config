@@ -23,7 +23,7 @@
     enable = true;
     publicKeys = [
       {
-	source = ./gpg/github.asc;
+	source = ./github.asc;
 	trust = 5;
       }
     ];
