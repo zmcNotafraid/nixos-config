@@ -117,12 +117,12 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    git
     zsh
     neovim 
     gnupg
     pinentry-tty
     wget
-    python3
   ];
 
   environment.variables = {
