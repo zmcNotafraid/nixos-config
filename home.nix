@@ -19,7 +19,15 @@
 
   programs.home-manager.enable = true;
   programs.autojump.enable = true;
-  programs.gpg.enable = true;
+  programs.gpg = {
+    enable = true;
+    publicKeys = [
+      {
+	source = ./gpg/github.asc;
+	trust = 5;
+      }
+    ];
+  }
 
   programs.git = {
     enable = true;
