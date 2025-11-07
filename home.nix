@@ -21,13 +21,7 @@
   programs.autojump.enable = true;
   programs.gpg = {
     enable = true;
-    publicKeys = [
-      {
-	source = ./github.asc;
-	trust = 5;
-      }
-    ];
-  }
+  };
 
   programs.git = {
     enable = true;
