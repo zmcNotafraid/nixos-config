@@ -127,6 +127,11 @@
 
   environment.variables = {
     XMODIFIERS = "@im=fcitx";
+    GTK_IM_MODULE = "fcitx";
+    QT_IM_MODULE = "fcitx";
+    INPUT_METHOD = "fcitx";
+    SDL_IM_MODULE = "fcitx";
+    GLFW_IM_MODULE = "ibus";
   };
 
   # Some programs need SUID wrappers, can be configured further or are
