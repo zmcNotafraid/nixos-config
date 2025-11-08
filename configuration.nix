@@ -121,8 +121,9 @@
     zsh
     neovim 
     gnupg
-    pinentry-tty
+    pinentry-curses
     wget
+    python3
   ];
 
   environment.variables = {
@@ -153,6 +154,12 @@
   programs.zsh.enable = true;
 
   users.defaultUserShell = pkgs.zsh;
+
+  programs.gnupg.agent = {                                                      
+    enable = true;
+    enableSSHSupport = true;
+    pinentryPackage = pkgs.pinentry-curses;
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
