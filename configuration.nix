@@ -123,7 +123,6 @@
     gnupg
     pinentry-curses
     wget
-    python3
   ];
 
   environment.variables = {

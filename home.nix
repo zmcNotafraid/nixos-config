@@ -45,7 +45,8 @@
 	};
       };
       tools = {
-        node = "lts";
+        python = ["3.11.9"];
+        node = ["22.21.1"];
 	erlang = ["28.1.1"];
 	elixir = ["1.19.0"];
       };
