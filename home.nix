@@ -15,6 +15,9 @@
     rustup
     autojump
     tig
+    alacritty
+    docker
+    tmux
   ];
 
   programs.home-manager.enable = true;
@@ -53,6 +56,7 @@
     };
   };
 
+ home.file.".config/nvim".source = ./config/nvim;
 
  programs.neovim = {
     enable = true;
@@ -64,15 +68,10 @@
       wl-clipboard
     ];
 
-    # ✅ 替代 deprecated 的 configure.customRC
-    extraConfig = ''
-      set clipboard=unnamedplus   " 启用系统剪贴板
-      set number                  " 显示行号
-      syntax on
+    extraLuaConfig = ''
+      require("config.lazy")
     '';
   };
-
-
 
   programs.zsh = {
     enable = true;  # 启用 Zsh

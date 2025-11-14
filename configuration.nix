@@ -123,6 +123,9 @@
     gnupg
     pinentry-curses
     wget
+    gcc
+    clang
+    llvm
   ];
 
   environment.variables = {
