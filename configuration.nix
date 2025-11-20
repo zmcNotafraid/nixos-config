@@ -126,6 +126,7 @@
     gcc
     clang
     llvm
+    unzip
   ];
 
   environment.variables = {

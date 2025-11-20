@@ -5,7 +5,7 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = {
-          "lua_ls", "rust_analyzer", "elixirls", "ruby_lsp"
+          "lua_ls", "rust_analyzer", "elixirls"
         },
       })
     end
